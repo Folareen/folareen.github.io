@@ -11,7 +11,7 @@ export default function WorkPage() {
         <main className="flex flex-col min-h-screen px-6 py-16 sm:px-12 md:px-20 max-w-3xl mx-auto w-full">
             <PageNav />
 
-            <div className="mb-14 fade-up">
+            <div className="mb-14">
                 <p className="font-mono text-xs text-accent tracking-widest uppercase mb-3">
                     Experience
                 </p>
@@ -24,7 +24,7 @@ export default function WorkPage() {
                 {workEntries.map((entry, i) => (
                     <div
                         key={`${entry.company}-${i}`}
-                        className={`fade-up delay-${Math.min(i + 1, 8)} pb-10 mb-10 border-b border-line last:border-b-0 last:mb-0`}
+                        className="pb-10 mb-10 border-b border-line last:border-b-0 last:mb-0"
                     >
                         <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-4">
                             <h2 className="font-display text-lg font-semibold text-accent">

@@ -1,20 +1,19 @@
 import Link from "next/link";
+import { LuArrowRight } from "react-icons/lu";
 
 interface FlowLinkProps {
     href: string;
     label: string;
-    delay?: number;
 }
 
-export default function FlowLink({ href, label, delay = 0 }: FlowLinkProps) {
+export default function FlowLink({ href, label }: FlowLinkProps) {
     return (
         <Link
             href={href}
-            className="flow-link group flex items-center gap-3 text-primary hover:text-accent transition-colors duration-200 fade-up"
-            style={{ animationDelay: `${delay}ms` }}
+            className="flow-link group flex items-center gap-3 text-primary hover:text-accent transition-colors duration-200"
         >
             <span className="font-display text-xl sm:text-2xl font-medium">{label}</span>
-            <span className="flow-arrow text-accent text-xl sm:text-2xl">→</span>
+            <LuArrowRight className="flow-arrow text-accent" size={20} />
         </Link>
     );
 }

@@ -2,8 +2,8 @@ export const identity = {
     name: "Wahab Afolarin Saka",
     role: "Fullstack Developer (Web & Mobile)",
     tagline: "Some work hard. Some work smart. I do both.",
-    availability: "Available for work — Remote / Global",
-    bio: "Close to 5 years building software across companies, startups, and direct clients. Web, mobile, and backend — I've shipped at every layer: flawless frontend interfaces, cross-platform mobile apps on the App Store and Play Store, real-time platforms, serverless APIs on AWS, and robust production backend systems. Deliberate about the craft, always learning, and never too comfortable to go deeper. I can take an idea from zero to a fully launched product — entirely solo.",
+    availability: "Available for work. Remote and global.",
+    bio: "Close to 5 years building software across companies, startups, and direct clients. Web, mobile, and backend. I have shipped at every layer: solid frontend interfaces, cross-platform mobile apps on the App Store and Play Store, real-time platforms, serverless APIs on AWS, and robust production backend systems. Deliberate about the craft, always learning, and never too comfortable to go deeper. I can take an idea from zero to a fully launched product, entirely solo.",
     currentlyBuilding: "Working on a side SaaS project — details coming soon.",
 }
 
@@ -84,7 +84,7 @@ export const workEntries: WorkEntry[] = [
             {
                 name: "Digital Loyalty Platform",
                 detail:
-                    "Contributed to the backend with TypeScript and AWS Lambda, then owned frontend integration in Next.js — connecting loyalty features to the UI and boosting page load performance with SSR. Resolved complex PassKit integration issues for pass design, creation, and notifications.",
+                    "Contributed to the backend with TypeScript and AWS Lambda, then owned the frontend integration in Next.js, connecting loyalty features to the UI and improving page load performance with SSR. Resolved tricky PassKit integration issues covering pass design, creation, and notifications.",
             },
         ],
     },

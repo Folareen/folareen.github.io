@@ -11,7 +11,7 @@ export default function StackPage() {
         <main className="flex flex-col min-h-screen px-6 py-16 sm:px-12 md:px-20 max-w-3xl mx-auto w-full">
             <PageNav />
 
-            <div className="mb-14 fade-up">
+            <div className="mb-14">
                 <p className="font-mono text-xs text-accent tracking-widest uppercase mb-3">
                     Skills &amp; tools
                 </p>
@@ -24,7 +24,6 @@ export default function StackPage() {
                 {stackGroups.map((group, i) => (
                     <div
                         key={group.label}
-                        className={`fade-up delay-${Math.min(i + 1, 8)}`}
                     >
                         <p className="font-mono text-xs text-muted tracking-widest uppercase mb-4">
                             {group.label}
@@ -42,7 +41,7 @@ export default function StackPage() {
                     </div>
                 ))}
 
-                <div className="fade-up delay-8">
+                <div>
                     <p className="font-mono text-xs text-muted tracking-widest uppercase mb-4">
                         Currently Learning
                     </p>
@@ -58,7 +57,7 @@ export default function StackPage() {
                     </div>
                 </div>
 
-                <div className="fade-up delay-8 pt-2 border-t border-line">
+                <div className="pt-2 border-t border-line">
                     <p className="font-mono text-xs text-muted tracking-widest uppercase mb-3">
                         Education
                     </p>

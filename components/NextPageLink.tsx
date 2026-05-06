@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { LuArrowRight } from "react-icons/lu";
 
 interface NextPageLinkProps {
     href: string;
@@ -14,7 +15,7 @@ export default function NextPageLink({ href, label }: NextPageLinkProps) {
             >
                 <span className="font-mono text-sm uppercase tracking-widest">Next</span>
                 <span className="font-display text-lg font-medium">{label}</span>
-                <span className="flow-arrow text-accent text-lg">→</span>
+                <LuArrowRight className="flow-arrow text-accent" size={18} />
             </Link>
         </div>
     );
