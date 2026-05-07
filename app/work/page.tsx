@@ -32,7 +32,8 @@ export default function WorkPage() {
                             </h2>
                             <div className="flex items-baseline gap-3">
                                 <span className="font-mono text-xs text-muted/50">{entry.year}</span>
-                                <span className="font-mono text-xs text-muted tracking-wide uppercase">
+                                <span className="font-mono text-xs text-muted/50">{entry.type}</span>
+                                <span className="font-mono text-xs text-primary tracking-wide uppercase">
                                     {entry.role}
                                 </span>
                             </div>

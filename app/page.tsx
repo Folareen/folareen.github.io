@@ -33,7 +33,7 @@ export default function Home() {
       </section>
 
       <section className="flex flex-col gap-5 mt-16">
-        <FlowLink href="/work" label="Where I've worked" />
+        <FlowLink href="/work" label="Who I've worked with" />
         <FlowLink href="/projects" label="See my projects" />
         <FlowLink href="/stack" label="My stack & skills" />
         <FlowLink href="/contact" label="Get in touch" />

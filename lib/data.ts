@@ -58,6 +58,7 @@ export type WorkProduct = {
 export type WorkEntry = {
     company: string
     year: string
+    type: "Contract" | "Full-time"
     role: string
     note?: string
     products: WorkProduct[]
@@ -67,6 +68,7 @@ export const workEntries: WorkEntry[] = [
     {
         company: "Crewswap",
         year: "2025 – 2026",
+        type: "Contract",
         role: "Backend Developer",
         products: [
             {
@@ -79,6 +81,7 @@ export const workEntries: WorkEntry[] = [
     {
         company: "WelcomeBack",
         year: "2025",
+        type: "Full-time",
         role: "Software Engineer",
         products: [
             {
@@ -91,6 +94,7 @@ export const workEntries: WorkEntry[] = [
     {
         company: "Dunison",
         year: "2024",
+        type: "Contract",
         role: "Frontend & Mobile Developer",
         products: [
             {
@@ -110,6 +114,7 @@ export const workEntries: WorkEntry[] = [
     {
         company: "mytherapist.io",
         year: "2023",
+        type: "Contract",
         role: "Fullstack Developer",
         products: [
             {
@@ -121,6 +126,7 @@ export const workEntries: WorkEntry[] = [
     {
         company: "2read",
         year: "2023 – present",
+        type: "Contract",
         role: "Mobile Developer",
         products: [
             {
@@ -133,6 +139,7 @@ export const workEntries: WorkEntry[] = [
     {
         company: "Airpri",
         year: "2023",
+        type: "Contract",
         role: "Fullstack Developer",
         products: [
             {
@@ -144,6 +151,7 @@ export const workEntries: WorkEntry[] = [
     {
         company: "Kemsanglobal",
         year: "2023",
+        type: "Contract",
         role: "Fullstack Developer",
         products: [
             {
@@ -155,6 +163,7 @@ export const workEntries: WorkEntry[] = [
     {
         company: "Carrotsuite ERP",
         year: "2022",
+        type: "Full-time",
         role: "Frontend & Mobile Developer",
         products: [
             {
@@ -170,6 +179,7 @@ export const workEntries: WorkEntry[] = [
     {
         company: "CBT Expert Solutions",
         year: "2022",
+        type: "Full-time",
         role: "Frontend Developer",
         products: [
             {
@@ -182,6 +192,7 @@ export const workEntries: WorkEntry[] = [
     {
         company: "Lannistar",
         year: "2021",
+        type: "Contract",
         role: "Frontend Developer",
         products: [
             {
