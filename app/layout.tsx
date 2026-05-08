@@ -23,7 +23,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Wahab Saka — Fullstack Developer",
   description:
-    "Fullstack developer with 4+ years building web and mobile products for startups. TypeScript, React, Node.js, AWS.",
+    "Fullstack developer (web & mobile) with close to 5 years shipping production products.",
 };
 
 export default function RootLayout({
