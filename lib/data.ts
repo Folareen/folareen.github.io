@@ -59,6 +59,7 @@ export type WorkEntry = {
     company: string
     year: string
     type: "Contract" | "Full-time"
+    location?: string
     role: string
     note?: string
     products: WorkProduct[]
@@ -69,6 +70,7 @@ export const workEntries: WorkEntry[] = [
         company: "Crewswap",
         year: "2025 – 2026",
         type: "Contract",
+        location: "US",
         role: "Backend Developer",
         products: [
             {
@@ -82,6 +84,7 @@ export const workEntries: WorkEntry[] = [
         company: "WelcomeBack",
         year: "2025",
         type: "Full-time",
+        location: "Chile",
         role: "Software Engineer",
         products: [
             {
@@ -115,6 +118,7 @@ export const workEntries: WorkEntry[] = [
         company: "mytherapist.io",
         year: "2023",
         type: "Contract",
+        location: "US",
         role: "Fullstack Developer",
         products: [
             {
@@ -127,6 +131,7 @@ export const workEntries: WorkEntry[] = [
         company: "2read",
         year: "2023 – present",
         type: "Contract",
+        location: "India",
         role: "Mobile Developer",
         products: [
             {
@@ -137,9 +142,10 @@ export const workEntries: WorkEntry[] = [
         ],
     },
     {
-        company: "Airpri",
+        company: "Rantir",
         year: "2023",
         type: "Contract",
+        location: "US",
         role: "Fullstack Developer",
         products: [
             {

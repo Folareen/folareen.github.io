@@ -27,9 +27,14 @@ export default function WorkPage() {
                         className="pb-10 mb-10 border-b border-line last:border-b-0 last:mb-0"
                     >
                         <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-4">
-                            <h2 className="font-display text-lg font-semibold text-accent">
-                                {entry.company}
-                            </h2>
+                            <div className="flex items-baseline gap-2">
+                                <h2 className="font-display text-lg font-semibold text-accent">
+                                    {entry.company}
+                                </h2>
+                                {entry.location && (
+                                    <span className="font-mono text-xs text-muted/50">{entry.location}</span>
+                                )}
+                            </div>
                             <div className="flex items-baseline gap-3">
                                 <span className="font-mono text-xs text-muted/50">{entry.year}</span>
                                 <span className="font-mono text-xs text-muted/50">{entry.type}</span>
