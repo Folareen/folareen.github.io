@@ -28,7 +28,7 @@ export default function Home() {
         </p>
 
         <p className="font-mono text-sm text-muted/70">
-          {identity.currentlyBuilding}
+          {identity.status}
         </p>
       </section>
 

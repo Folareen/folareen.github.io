@@ -4,7 +4,7 @@ export const identity = {
     tagline: "Some work hard. Some work smart. I do both.",
     availability: "Available for work. Remote and global.",
     bio: "Close to 5 years building software across companies, startups, and direct clients. Web, mobile, and backend. I have shipped at every layer: solid frontend interfaces, cross-platform mobile apps on the App Store and Play Store, real-time platforms, serverless APIs on AWS, and robust production backend systems. Deliberate about the craft, always learning, and never too comfortable to go deeper. I can take an idea from zero to a fully launched product, entirely solo.",
-    currentlyBuilding: "Working on a side SaaS project — details coming soon.",
+    status: "Actively seeking a new role or contract opportunity.",
 }
 
 export type Project = {
@@ -15,6 +15,20 @@ export type Project = {
 }
 
 export const projects: Project[] = [
+    {
+        name: "Glasspot",
+        description:
+            "Rule-governed money contribution platform where payout and refund rules lock before anyone contributes, so funds move automatically or via a trusted trigger instead of sitting in a personal account. Powered by Nomba, built for the DevCareer x Nomba Hackathon 2026.",
+        url: "https://glasspot.vercel.app",
+        stack: ["Next.js", "Fastify", "TypeScript", "Drizzle ORM", "PostgreSQL", "BullMQ", "Nomba API"],
+    },
+    {
+        name: "Clance",
+        description:
+            "Simplified project management platform for freelancers, clients, and lean teams — unifying tasks, real-time chat, files, and approvals into one project workspace.",
+        url: "https://clance-app.vercel.app",
+        stack: ["Next.js", "NestJS", "TypeScript", "Socket.io", "Turborepo", "PostgreSQL"],
+    },
     {
         name: "Eventza",
         description:
@@ -251,7 +265,7 @@ export const education = {
     institution: "Obafemi Awolowo University, Ile-Ife",
 }
 
-export const currentlyLearning = ["AI Engineering"]
+export const currentlyLearning = ["QA Engineering"]
 
 export const links = {
     github: "https://github.com/Folareen",
