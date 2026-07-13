@@ -25,9 +25,9 @@ export default function WorkPage() {
             <div className="flex flex-col gap-6">
                 {workEntries.map((entry, i) => (
                     <Reveal key={`${entry.company}-${i}`} delay={Math.min(i, 4) * 0.05}>
-                        <div className="bg-surface rounded-sm p-6 sm:p-8 transition-colors duration-200 hover:bg-line/20">
-                            <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-4">
-                                <div className="flex items-baseline gap-2">
+                        <div className="bg-surface rounded-sm p-5 sm:p-8 transition-colors duration-200 hover:bg-line/20">
+                            <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2 mb-4">
+                                <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
                                     <h2 className="font-display text-xl font-semibold text-accent">
                                         {entry.company}
                                     </h2>
@@ -35,10 +35,10 @@ export default function WorkPage() {
                                         <span className="font-mono text-xs text-muted/50">{entry.location}</span>
                                     )}
                                 </div>
-                                <div className="flex items-baseline gap-3">
+                                <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 sm:justify-end">
                                     <span className="font-mono text-xs text-muted/50">{entry.year}</span>
                                     <span className="font-mono text-xs text-muted/50">{entry.type}</span>
-                                    <span className="font-mono text-xs text-primary tracking-wide uppercase">
+                                    <span className="font-mono text-xs text-primary tracking-wide uppercase basis-full sm:basis-auto">
                                         {entry.role}
                                     </span>
                                 </div>
