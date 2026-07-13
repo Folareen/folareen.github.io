@@ -1,5 +1,6 @@
 import PageNav from "@/components/PageNav";
 import NextPageLink from "@/components/NextPageLink";
+import Reveal from "@/components/Reveal";
 import { links, identity } from "@/lib/data";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -58,42 +59,44 @@ export default function ContactPage() {
             </div>
 
             <ul className="flex flex-col gap-3">
-                {contactItems.map((item) => (
+                {contactItems.map((item, i) => (
                     <li key={item.label}>
-                        <a
-                            href={item.href}
-                            target={item.href.startsWith("mailto") ? undefined : "_blank"}
-                            rel={item.href.startsWith("mailto") ? undefined : "noopener noreferrer"}
-                            className="group flex items-center gap-4 p-4 bg-surface border border-line rounded-sm hover:border-accent transition-colors duration-200"
-                        >
-                            <span className="text-muted group-hover:text-accent transition-colors duration-200">
-                                {item.icon}
-                            </span>
-                            <div className="flex flex-col">
-                                <span className="font-mono text-xs text-muted tracking-widest uppercase">
-                                    {item.label}
+                        <Reveal delay={i * 0.06} y={10}>
+                            <a
+                                href={item.href}
+                                target={item.href.startsWith("mailto") ? undefined : "_blank"}
+                                rel={item.href.startsWith("mailto") ? undefined : "noopener noreferrer"}
+                                className="group flex items-center gap-4 p-4 bg-surface border border-line rounded-sm hover:border-accent hover:-translate-y-0.5 hover:shadow-lg hover:shadow-accent/5 transition-all duration-200"
+                            >
+                                <span className="text-muted group-hover:text-accent transition-colors duration-200">
+                                    {item.icon}
                                 </span>
-                                <span className="font-body text-sm text-primary mt-0.5">
-                                    {item.handle}
-                                </span>
-                            </div>
-                            <LuArrowUpRight className="ml-auto text-muted group-hover:text-accent transition-colors duration-200" size={16} />
-                        </a>
+                                <div className="flex flex-col">
+                                    <span className="font-mono text-xs text-muted tracking-widest uppercase">
+                                        {item.label}
+                                    </span>
+                                    <span className="font-body text-sm text-primary mt-0.5">
+                                        {item.handle}
+                                    </span>
+                                </div>
+                                <LuArrowUpRight className="ml-auto text-muted group-hover:text-accent group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200" size={16} />
+                            </a>
+                        </Reveal>
                     </li>
                 ))}
             </ul>
 
-            <div className="mt-8">
+            <Reveal delay={contactItems.length * 0.06} className="mt-8">
                 <a
                     href={links.resume}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group inline-flex items-center gap-3 px-5 py-3 border border-accent/40 rounded-sm text-accent hover:bg-accent/10 transition-colors duration-200"
+                    className="group inline-flex items-center gap-3 px-5 py-3 border border-accent/40 rounded-sm text-accent hover:bg-accent/10 hover:-translate-y-0.5 transition-all duration-200"
                 >
                     <LuFileText size={16} />
                     <span className="font-mono text-sm tracking-wide">View Resume</span>
                 </a>
-            </div>
+            </Reveal>
 
             <NextPageLink href="/" label="Back to home" />
         </main>

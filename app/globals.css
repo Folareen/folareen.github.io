@@ -46,3 +46,51 @@
 .flow-link:hover .flow-arrow {
   transform: translateX(4px);
 }
+
+/* ── Floating icon field ─────────────────────────────────── */
+
+.icon-float {
+  transform: rotate(var(--r, 0deg));
+  animation-name: icon-float;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+
+@keyframes icon-float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(var(--r, 0deg));
+  }
+  50% {
+    transform: translateY(-16px) rotate(var(--r, 0deg));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .icon-float {
+    animation: none;
+  }
+}
+
+/* ── Marquee ─────────────────────────────────────────────── */
+
+.marquee__track {
+  animation: marquee-scroll 22s linear infinite;
+  will-change: transform;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee__track {
+    animation: none;
+  }
+}

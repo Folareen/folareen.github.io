@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Inter, JetBrains_Mono } from "next/font/google";
+import PageTransition from "@/components/PageTransition";
+import IconField from "@/components/IconField";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -36,8 +38,9 @@ export default function RootLayout({
       lang="en"
       className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-canvas text-primary font-body">
-        {children}
+      <body className="min-h-full flex flex-col text-primary font-body">
+        <IconField />
+        <PageTransition>{children}</PageTransition>
       </body>
     </html>
   );
