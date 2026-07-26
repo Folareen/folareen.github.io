@@ -61,6 +61,7 @@ export default function Hero() {
         <motion.div variants={item}><FlowLink href="/work" label="Who I've worked with" /></motion.div>
         <motion.div variants={item}><FlowLink href="/projects" label="See my projects" /></motion.div>
         <motion.div variants={item}><FlowLink href="/stack" label="My stack & skills" /></motion.div>
+        <motion.div variants={item}><FlowLink href="/recognition" label="Recognition" /></motion.div>
         <motion.div variants={item}><FlowLink href="/contact" label="Get in touch" /></motion.div>
       </motion.section>
     </motion.div>

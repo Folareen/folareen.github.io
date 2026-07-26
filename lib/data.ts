@@ -288,3 +288,14 @@ export const links = {
     email: "sakawahab03@gmail.com",
     resume: "https://drive.google.com/file/d/1o4OSJoDcjKF7vb7VytLpF1OL-a6cv6HZ/view?usp=drive_link",
 }
+
+export const recognitions = [
+    {
+        title: "🥈 Runner-up",
+        organization: "Nomba × DevCareer Hackathon",
+        year: "2026",
+        description:
+            "Led a two-person team while collaborating as a Full-Stack Engineer to build Glasspot, a democratic and transparent money pooling solution for Nigerians.\n Finished as runner-up (2nd place) out of 268 final submissions at the Nomba × DevCareer Hackathon 2026.",
+        link: "https://glasspot.vercel.app",
+    }
+];

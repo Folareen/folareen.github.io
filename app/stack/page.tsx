@@ -69,7 +69,7 @@ export default function StackPage() {
                 <p className="font-body text-sm text-muted mt-1">{education.institution}</p>
             </Reveal>
 
-            <NextPageLink href="/contact" label="Get in touch" />
+            <NextPageLink href="/recognition" label="Recognition" />
         </main>
     );
 }
