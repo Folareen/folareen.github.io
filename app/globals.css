@@ -2,12 +2,12 @@
 
 @theme inline {
   /* Colors */
-  --color-canvas: #07090F;
-  --color-surface: #0D1117;
-  --color-line: #1C2333;
-  --color-accent: #3B7DD8;
-  --color-primary: #E6EDF3;
-  --color-muted: #8B949E;
+  --color-canvas: #0A0A0A;
+  --color-surface: #141414;
+  --color-line: #2A2A2A;
+  --color-accent: #FFFFFF;
+  --color-primary: #F2F2F2;
+  --color-muted: #8A8A8A;
 
   /* Fonts */
   --font-display: var(--font-space-grotesk);
@@ -24,15 +24,15 @@
   }
 
   html {
-    background-color: #07090F;
-    color: #E6EDF3;
+    background-color: #0A0A0A;
+    color: #F2F2F2;
     font-family: var(--font-inter), system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   ::selection {
-    background-color: rgba(59, 125, 216, 0.25);
+    background-color: rgba(255, 255, 255, 0.2);
   }
 }
 

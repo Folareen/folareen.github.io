@@ -42,7 +42,7 @@ export default function StackPage() {
                     </Reveal>
                 ))}
 
-                <Reveal delay={Math.min(stackGroups.length, 5) * 0.05}>
+                {/* <Reveal delay={Math.min(stackGroups.length, 5) * 0.05}>
                     <div className="bg-surface border border-accent/30 rounded-sm p-5">
                         <p className="font-mono text-xs text-accent tracking-widest uppercase mb-4">
                             Currently Learning
@@ -58,7 +58,7 @@ export default function StackPage() {
                             ))}
                         </div>
                     </div>
-                </Reveal>
+                </Reveal> */}
             </div>
 
             <Reveal delay={Math.min(stackGroups.length + 1, 5) * 0.05} className="mt-10 pt-6 border-t border-line">
