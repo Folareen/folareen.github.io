@@ -98,6 +98,22 @@ export type WorkEntry = {
 
 export const workEntries: WorkEntry[] = [
     {
+        company: "2read",
+        year: "2023 – present",
+        type: "Part-time",
+        location: "India",
+        role: "Mobile App Developer",
+        note: "High ownership — work directly with the founder, from feature scoping to shipping.",
+        stats: [{ value: 1000, suffix: "+", label: "downloads across App Store & Google Play" }],
+        products: [
+            {
+                name: "AI Kindle Reading App",
+                detail:
+                    "Built a Kindle-highlights extraction app with React Native and Supabase, handling HTML parsing with Cheerio and a proper in-app subscription system via react-native-iap. Shipped AI-powered smart dictionary, highlight insights, and summaries using the Claude and Gemini APIs. Still maintaining it — fixing issues, shipping UI upgrades, and adding features as the product grows.",
+            },
+        ],
+    },
+    {
         company: "Crewswap",
         year: "2025 – 2026",
         type: "Contract",
@@ -144,21 +160,6 @@ export const workEntries: WorkEntry[] = [
             {
                 name: "Services Marketplace",
                 detail: "Web and mobile marketplace built with React and React Native — owned all API wiring and shared state across both platforms.",
-            },
-        ],
-    },
-    {
-        company: "2read",
-        year: "2023 – present",
-        type: "Part-time",
-        location: "India",
-        role: "Mobile App Developer",
-        stats: [{ value: 1000, suffix: "+", label: "downloads across App Store & Google Play" }],
-        products: [
-            {
-                name: "AI Kindle Reading App",
-                detail:
-                    "Built a Kindle-highlights extraction app with React Native and Supabase, handling HTML parsing with Cheerio and a proper in-app subscription system via react-native-iap. Shipped AI-powered smart dictionary, highlight insights, and summaries using the Claude and Gemini APIs. Still maintaining it — fixing issues, shipping UI upgrades, and adding features as the product grows.",
             },
         ],
     },
