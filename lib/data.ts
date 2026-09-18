@@ -1,74 +1,134 @@
 export const identity = {
     name: "Wahab Afolarin Saka",
-    role: "Fullstack Developer (Web & Mobile)",
+    role: "Fullstack Developer — Web, Mobile & Backend",
     tagline: "Some work hard. Some work smart. I do both.",
     availability: "Available for work. Remote and global.",
-    bio: "Close to 5 years building software across companies, startups, and direct clients — web, mobile, and backend. I take an idea from zero to a fully launched product, entirely solo, and I ship fast without cutting corners on the craft.",
-    bioSecondary: "I have shipped at every layer: solid frontend interfaces, cross-platform mobile apps on the App Store and Play Store, real-time platforms, serverless APIs on AWS, and production backend systems handling real users. Deliberate about the craft, always learning, and never too comfortable to go deeper.",
+    headline: "I build products people actually use.",
+    headlineAccent: "people actually use",
+    bio: "Close to 5 years building software across companies, startups, and direct clients. I take a product from nothing to launched — frontend, backend, mobile, whatever the thing actually needs — and I ship fast without cutting corners on the craft.",
+    bioSecondary: "I have shipped at every layer: production frontends, cross-platform mobile apps live on the App Store and Play Store, real-time platforms, serverless APIs on AWS, and backend systems handling real users. Whatever the gap is, I close it.",
     status: "Actively seeking a new role or contract opportunity.",
 }
 
 export type Project = {
     name: string
+    tagline: string
     description: string
     url: string
     stack: string[]
+    year?: string
+    role?: string
+    badge?: string
     image?: string
 }
 
 export const projects: Project[] = [
     {
-        name: "Glasspot",
+        name: "Compesight",
+        tagline: "Competitor intelligence, on autopilot",
         description:
-            "Rule-governed money contribution platform where payout and refund rules lock before anyone contributes, so funds move automatically or via a trusted trigger instead of sitting in a personal account. Powered by Nomba, built for the DevCareer x Nomba Hackathon 2026.",
-        url: "https://glasspot.vercel.app",
-        stack: ["Next.js", "Fastify", "TypeScript", "Drizzle ORM", "PostgreSQL", "BullMQ", "Nomba API"],
-        image: "/projects/glasspot-1.png",
+            "Product marketing teams lose deals because they find out too late that a competitor changed pricing or shipped a feature. Compesight watches competitors across 10 source types, catches every change, and turns it into ranked alerts and a battlecard that stays current on its own. Built and shipped solo — crawlers, LLM classification pipeline, billing, and all.",
+        url: "https://compesight.site",
+        stack: ["Next.js", "FastAPI", "PostgreSQL", "pgvector", "Celery", "Redis", "Playwright", "Claude", "Clerk", "Paddle"],
+        year: "2026",
+        role: "Solo — full product",
+        badge: "Live",
+        image: "/projects/compesight-1.png",
+    },
+    {
+        name: "Tipwise",
+        tagline: "Predictions that grade themselves in public",
+        description:
+            "Every tipster site claims a win rate and none of them prove it. Tipwise pairs Dixon-Coles statistical modeling with LLM synthesis to produce daily risk-ranked picks across 12 leagues — then publishes its own track record, graded automatically, whether it was right or wrong. The hard part was trust, so I made verification the product.",
+        url: "https://usetipwise.site",
+        stack: ["Next.js", "TypeScript", "Supabase", "Claude", "TanStack Query", "Puppeteer"],
+        year: "2026",
+        role: "Solo — full product",
+        badge: "Live",
+        image: "/projects/tipwise-1.png",
     },
     {
         name: "Clance",
+        tagline: "A workspace shaped like how agencies actually staff",
         description:
-            "Simplified project management platform for freelancers, clients, and lean teams — unifying tasks, real-time chat, files, and approvals into one project workspace.",
-        url: "https://clance-app.vercel.app",
-        stack: ["Next.js", "NestJS", "TypeScript", "Socket.io", "Turborepo", "PostgreSQL"],
+            "Freelance teams juggle tasks in one tool, chat in another, and approvals in a thread nobody can find. Clance puts tasks, real-time chat, notes, files and approvals in one workspace — with per-project roles instead of global ones, because the same person leads one project and executes on another. Next.js, NestJS and Socket.io in a Turborepo monorepo, built end to end.",
+        url: "https://clance.team",
+        stack: ["Next.js", "NestJS", "Fastify", "Socket.io", "Drizzle ORM", "PostgreSQL", "Turborepo"],
+        year: "2025",
+        role: "Solo — full product",
+        badge: "Live",
         image: "/projects/clance-1.png",
     },
     {
-        name: "Eventza",
+        name: "Glasspot",
+        tagline: "Runner-up out of 268 teams",
         description:
-            "Event ticketing platform for creating events, selling tickets, and checking in attendees via QR codes. Features Stripe Connect payments and a scanner web app.",
+            "Group contributions in Nigeria usually mean one person holding everyone's money and everyone hoping. Glasspot locks the payout and refund rules before a single naira goes in, so funds move automatically or through a trusted trigger — never out of someone's personal account. Led a two-person team to 2nd place out of 268 final submissions at the Nomba x DevCareer Hackathon 2026.",
+        url: "https://glasspot.vercel.app",
+        stack: ["Next.js", "Fastify", "TypeScript", "Drizzle ORM", "PostgreSQL", "BullMQ", "Nomba API"],
+        year: "2026",
+        role: "Team lead — 2 people",
+        badge: "2nd / 268",
+        image: "/projects/glasspot-1.png",
+    },
+    {
+        name: "Eventza",
+        tagline: "Sell tickets, scan people in",
+        description:
+            "End-to-end event ticketing — create an event, sell tickets with Stripe Connect so organisers get paid directly, and check attendees in by QR from a companion scanner app. Payments, ticketing and check-in all built from scratch.",
         url: "https://eventza.vercel.app",
         stack: ["Next.js", "TypeScript", "TailwindCSS", "Express", "PostgreSQL", "Stripe", "AWS S3", "Turborepo"],
+        year: "2024",
+        role: "Solo — full product",
+        badge: "Live",
         image: "/projects/eventza-1.png",
     },
     {
         name: "KeepNet",
+        tagline: "Notes that travel with you",
         description:
-            "Note-taking and content sharing platform — organize and access notes across devices, share with anyone.",
+            "A note-taking and sharing platform with a proper rich-text editor, file uploads to S3, and cross-device sync — write anywhere, share with anyone by link.",
         url: "https://keepnet.vercel.app",
         stack: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Tiptap", "AWS S3"],
+        year: "2024",
+        role: "Solo — full product",
+        badge: "Live",
         image: "/projects/keepnet-1.png",
     },
     {
         name: "Resumake",
-        description: "Resume builder web app to create, customize, and export a resume in minutes.",
+        tagline: "A resume in minutes, not an afternoon",
+        description:
+            "Build, customise and export a clean resume without fighting a word processor. Live preview, multiple templates, PDF export.",
         url: "https://resumake.vercel.app",
         stack: ["React", "TypeScript", "Firebase", "Redux", "SASS"],
+        year: "2023",
+        role: "Solo — full product",
+        badge: "Live",
         image: "/projects/resumake-1.png",
     },
     {
         name: "WriteOn",
-        description: "Blogging platform where anyone can read and publish blogs.",
+        tagline: "Publishing, minus the friction",
+        description:
+            "A blogging platform where anyone can read and publish — rich editor, image uploads, and a reading experience that gets out of the way.",
         url: "https://writeon.vercel.app",
         stack: ["React", "TypeScript", "TailwindCSS", "Express", "MongoDB", "Cloudinary"],
+        year: "2023",
+        role: "Solo — full product",
+        badge: "Live",
         image: "/projects/writeon-1.png",
     },
     {
         name: "Ghostgram",
+        tagline: "Say it without saying who",
         description:
-            "Anonymous messaging app — create a personal link, share it, and receive messages without the sender revealing who they are.",
+            "Anonymous messaging — claim a personal link, share it anywhere, and collect messages without senders ever revealing themselves.",
         url: "https://ghostgram.vercel.app",
         stack: ["Next.js", "TailwindCSS", "MongoDB", "Mongoose"],
+        year: "2023",
+        role: "Solo — full product",
+        badge: "Live",
         image: "/projects/ghostgram-1.png",
     },
 ]
@@ -92,6 +152,7 @@ export type WorkEntry = {
     location?: string
     role: string
     note?: string
+    impact?: string
     stats?: WorkStat[]
     products: WorkProduct[]
 }
@@ -103,6 +164,7 @@ export const workEntries: WorkEntry[] = [
         type: "Part-time",
         location: "India",
         role: "Mobile App Developer",
+        impact: "Sole developer on a live App Store and Play Store product, working directly with the founder.",
         note: "High ownership — work directly with the founder, from feature scoping to shipping.",
         stats: [{ value: 1000, suffix: "+", label: "downloads across App Store & Google Play" }],
         products: [
@@ -118,12 +180,13 @@ export const workEntries: WorkEntry[] = [
         year: "2025 – 2026",
         type: "Contract",
         location: "US",
-        role: "Backend Developer",
+        role: "Fullstack Developer",
+        impact: "Built the entire backend alone — including the matching algorithm the product runs on — and wired up the frontend integration.",
         products: [
             {
                 name: "Schedule Management & Swap Platform",
                 detail:
-                    "Designed and built the entire backend from scratch for a pilot scheduling and swap platform — Node.js, TypeScript, Express, MySQL on AWS. Designed the matching algorithm that pairs pilots and flight attendants for schedule swaps, built an end-to-end chat system on Socket.io, and automated schedule data extraction from flica.net with Puppeteer.",
+                    "Designed and built the entire backend from scratch for a pilot scheduling and swap platform — Node.js, TypeScript, Express, MySQL on AWS. Designed the matching algorithm that pairs pilots and flight attendants for schedule swaps, built an end-to-end chat system on Socket.io, and automated schedule data extraction from flica.net with Puppeteer. Also handled frontend integration — wiring the client to these APIs and fixing issues on that side.",
             },
         ],
     },
@@ -133,6 +196,7 @@ export const workEntries: WorkEntry[] = [
         type: "Full-time",
         location: "Chile",
         role: "Software Engineer",
+        impact: "Founding engineer. Shipped the integration that had stalled before I joined.",
         note: "Joined as a founding engineer, working directly with the CTO to ship the platform end to end.",
         products: [
             {
@@ -147,6 +211,7 @@ export const workEntries: WorkEntry[] = [
         year: "2023 – 2025",
         type: "Contract",
         role: "Frontend & Mobile Developer",
+        impact: "Only frontend and mobile developer across three products, on both iOS and Android.",
         note: "Sole frontend and mobile developer across all three products — shipped to both iOS and Android.",
         products: [
             {
@@ -168,6 +233,7 @@ export const workEntries: WorkEntry[] = [
         year: "2023 – 2024",
         type: "Freelance",
         role: "Fullstack Developer",
+        impact: "Delivered for US startups across web, mobile and realtime — every project shipped.",
         products: [
             {
                 name: "mytherapist.io",
@@ -196,6 +262,7 @@ export const workEntries: WorkEntry[] = [
         year: "2022 – 2023",
         type: "Full-time",
         role: "Frontend & Mobile Developer",
+        impact: "Rebuilt a core product from scratch and fixed what the previous build got wrong.",
         products: [
             {
                 name: "Visitor Management Web App",
@@ -216,6 +283,7 @@ export const workEntries: WorkEntry[] = [
         year: "2022",
         type: "Full-time",
         role: "Frontend Developer",
+        impact: "Built and maintained testing apps where a failed session means a failed exam.",
         products: [
             {
                 name: "CBT Platform",
@@ -229,6 +297,7 @@ export const workEntries: WorkEntry[] = [
         year: "2021 – 2022",
         type: "Contract",
         role: "Frontend Developer",
+        impact: "First professional role — shipped client sites end to end with the IT team.",
         products: [
             {
                 name: "E-commerce Websites",
@@ -241,46 +310,98 @@ export const workEntries: WorkEntry[] = [
 
 export type StackGroup = {
     label: string
+    icon: "code" | "layout" | "server" | "database" | "cloud" | "layers" | "wrench"
+    blurb: string
     items: string[]
 }
 
 export const stackGroups: StackGroup[] = [
     {
         label: "Languages",
-        items: ["TypeScript", "JavaScript", "SQL", "HTML", "CSS", "Markdown"],
+        icon: "code",
+        blurb: "What I write every day",
+        items: ["TypeScript", "JavaScript", "Python", "SQL", "HTML", "CSS", "Markdown"],
     },
     {
         label: "Frontend",
-        items: ["React.js", "Next.js", "React Native", "Expo", "TailwindCSS", "Material UI", "Chakra UI", "Redux", "Zustand"],
+        icon: "layout",
+        blurb: "Interfaces people actually use",
+        items: ["React.js", "Next.js", "React Native", "Flutter", "Expo", "TailwindCSS", "Material UI", "Chakra UI", "Redux", "Zustand"],
     },
     {
         label: "Backend",
-        items: ["Node.js", "Express.js", "NestJS", "AWS Lambda"],
+        icon: "server",
+        blurb: "APIs and services under load",
+        items: ["Node.js", "Express.js", "NestJS", "Fastify", "FastAPI", "AWS Lambda", "Socket.io", "Celery", "BullMQ"],
     },
     {
         label: "Databases",
-        items: ["MySQL", "PostgreSQL", "MongoDB", "DynamoDB", "Redis"],
+        icon: "database",
+        blurb: "Where the data lives",
+        items: ["PostgreSQL", "MySQL", "MongoDB", "DynamoDB", "Redis"],
     },
     {
         label: "Infrastructure",
-        items: ["AWS (Lambda, S3, EC2)", "Docker", "Vercel", "Firebase", "Supabase"],
+        icon: "cloud",
+        blurb: "Getting it shipped and keeping it up",
+        items: ["AWS (Lambda, S3, EC2)", "Docker", "Vercel", "Firebase", "Supabase", "Stripe / Stripe Connect", "Paddle", "Clerk"],
     },
     {
         label: "CMS",
+        icon: "layers",
+        blurb: "Content without redeploys",
         items: ["Strapi", "Sanity", "WordPress"],
     },
     {
         label: "Tools",
-        items: ["Git", "Prisma", "Sequelize", "Figma"],
+        icon: "wrench",
+        blurb: "The rest of the workbench",
+        items: ["Git", "Prisma", "Drizzle ORM", "Sequelize", "Turborepo", "Playwright"],
     },
 ]
+
+export type Capability = {
+    label: string
+    icon: "layout" | "server" | "smartphone" | "rocket"
+    blurb: string
+    proof: string
+}
+
+/* What I actually do, stated as range rather than a single lane. */
+export const capabilities: Capability[] = [
+    {
+        label: "Frontend",
+        icon: "layout",
+        blurb: "Production interfaces in React and Next.js — fast, responsive, and built to hold up once real users arrive.",
+        proof: "Known for building frontend that's polished, not just functional.",
+    },
+    {
+        label: "Backend",
+        icon: "server",
+        blurb: "APIs, realtime systems, queues and serverless services that carry actual traffic.",
+        proof: "Built production backends — APIs, matching logic, realtime, all of it.",
+    },
+    {
+        label: "Mobile",
+        icon: "smartphone",
+        blurb: "Cross-platform apps in React Native, shipped through review and maintained after launch.",
+        proof: "Several apps live on the App Store and Play Store, 1,000+ downloads.",
+    },
+    {
+        label: "The whole product",
+        icon: "rocket",
+        blurb: "When there is no team, I am the team — architecture, build, deploy, billing, and the parts nobody scoped.",
+        proof: "Several products built solo, end to end — architecture through launch.",
+    },
+]
+
+/** Short track-record line under the byline. */
+export const experienceLine = "5+ years shipping production software"
 
 export const education = {
     degree: "BSc. Computer Science with Economics (in progress)",
     institution: "Obafemi Awolowo University, Ile-Ife",
 }
-
-export const currentlyLearning = ["QA Engineering"]
 
 export const links = {
     github: "https://github.com/Folareen",
@@ -292,11 +413,11 @@ export const links = {
 
 export const recognitions = [
     {
-        title: "🥈 Runner-up",
+        title: "Runner-up — 2nd of 268",
         organization: "Nomba × DevCareer Hackathon",
         year: "2026",
         description:
-            "Led a two-person team while collaborating as a Full-Stack Engineer to build Glasspot, a democratic and transparent money pooling solution for Nigerians.\n Finished as runner-up (2nd place) out of 268 final submissions at the Nomba × DevCareer Hackathon 2026.",
+            "Led a two-person team and built Glasspot end to end — a transparent money pooling platform for Nigerians, where the payout and refund rules lock before anyone contributes.\n\nFinished 2nd out of 268 final submissions at the Nomba x DevCareer Hackathon 2026.",
         link: "https://glasspot.vercel.app",
     }
 ];

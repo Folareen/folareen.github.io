@@ -1,18 +1,25 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* Colors */
-  --color-canvas: #0A0A0A;
-  --color-surface: #141414;
-  --color-line: #2A2A2A;
-  --color-accent: #FFFFFF;
-  --color-primary: #F2F2F2;
-  --color-muted: #8A8A8A;
+  /* ── Color ─────────────────────────────────────────────── */
+  --color-canvas: #0D0D12;
+  --color-surface: #16161E;
+  --color-raised: #1D1D27;
+  --color-line: #282833;
+  --color-primary: #F2F1EE;
+  --color-muted: #8E8D99;
+  --color-dim: #6A6975;
 
-  /* Fonts */
-  --font-display: var(--font-space-grotesk);
-  --font-body: var(--font-inter);
-  --font-mono: var(--font-jetbrains);
+  /* Accents — tangerine leads, cyan supports */
+  --color-accent: #FF6B35;
+  --color-accent-deep: #D8501F;
+  --color-cyan: #39D6E0;
+  --color-cyan-deep: #16A9B3;
+
+  /* ── Fonts ─────────────────────────────────────────────── */
+  --font-display: var(--font-bricolage);
+  --font-body: var(--font-dm-sans);
+  --font-mono: var(--font-dm-mono);
 }
 
 @layer base {
@@ -24,59 +31,54 @@
   }
 
   html {
-    background-color: #0A0A0A;
-    color: #F2F2F2;
-    font-family: var(--font-inter), system-ui, sans-serif;
+    background-color: #0D0D12;
+    color: #F2F1EE;
+    font-family: var(--font-dm-sans), system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   ::selection {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 107, 53, 0.28);
+  }
+
+  :focus-visible {
+    outline: 2px solid #FF6B35;
+    outline-offset: 3px;
   }
 }
 
-/* ── Flow link arrow ────────────────────────────────────── */
+/* ── Flow link arrow ─────────────────────────────────────── */
 
 .flow-arrow {
   display: inline-block;
-  transition: transform 200ms ease;
+  transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .flow-link:hover .flow-arrow {
-  transform: translateX(4px);
+  transform: translateX(5px);
 }
 
-/* ── Floating icon field ─────────────────────────────────── */
+/* ── Availability pulse ──────────────────────────────────── */
 
-.icon-float {
-  transform: rotate(var(--r, 0deg));
-  animation-name: icon-float;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  will-change: transform;
+.pulse-dot {
+  animation: pulse-ring 2.6s ease-out infinite;
 }
 
-@keyframes icon-float {
-  0%,
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.5);
+  }
+  70%,
   100% {
-    transform: translateY(0) rotate(var(--r, 0deg));
-  }
-  50% {
-    transform: translateY(-16px) rotate(var(--r, 0deg));
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .icon-float {
-    animation: none;
+    box-shadow: 0 0 0 9px rgba(255, 107, 53, 0);
   }
 }
 
 /* ── Marquee ─────────────────────────────────────────────── */
 
 .marquee__track {
-  animation: marquee-scroll 22s linear infinite;
+  animation: marquee-scroll 26s linear infinite;
   will-change: transform;
 }
 
@@ -89,8 +91,59 @@
   }
 }
 
+/* ── Ambient drift for hero art ──────────────────────────── */
+
+.drift {
+  animation: drift-y 7s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.drift-slow {
+  animation-duration: 9.5s;
+  animation-delay: -2s;
+}
+
+.drift-slower {
+  animation-duration: 12s;
+  animation-delay: -4.5s;
+}
+
+@keyframes drift-y {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-9px);
+  }
+}
+
+/* ── Section rule that draws itself in ───────────────────── */
+
+.rule-grow {
+  transform-origin: left center;
+  animation: rule-grow 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes rule-grow {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .marquee__track {
+
+  .marquee__track,
+  .drift,
+  .pulse-dot,
+  .rule-grow {
     animation: none;
+  }
+
+  .rule-grow {
+    transform: none;
   }
 }
