@@ -16,7 +16,7 @@ export default function WorkPage() {
             <PageNav />
 
             <SectionHead
-                eyebrow="Five years · eight teams"
+                eyebrow="Five years"
                 title="Work"
                 art={<SpotTimeline className="h-16 w-24" />}
             />

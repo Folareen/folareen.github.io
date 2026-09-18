@@ -22,8 +22,7 @@ export default function ProjectsPage() {
             />
 
             <p className="font-body text-base text-muted leading-relaxed max-w-xl -mt-6 mb-12">
-                Every one of these is live and built end to end — most of them alone.
-                The first four are the ones worth your time.
+                Every one of these is live and built end to end, most of them alone.
             </p>
 
             <div className="flex flex-col gap-10 md:gap-14">

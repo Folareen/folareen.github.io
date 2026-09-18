@@ -183,6 +183,7 @@ export const stackIcons = {
   code: IconCode,
   layout: IconLayout,
   server: IconServer,
+  smartphone: IconSmartphone,
   database: IconDatabase,
   cloud: IconCloud,
   layers: IconLayers,

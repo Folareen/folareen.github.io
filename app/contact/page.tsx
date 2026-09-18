@@ -33,8 +33,8 @@ export default function ContactPage() {
 
             <div className="-mt-6 mb-10">
                 <p className="font-body text-base text-primary/85 leading-relaxed max-w-lg">
-                    If you need someone who can take a product from nothing to launched —
-                    or step into whichever layer is short-handed — I would like to hear about it.
+                    If you need someone who can take a product from nothing to launched,
+                    or step into whichever layer is short-handed, I would like to hear about it.
                 </p>
                 <div className="flex items-center gap-2.5 mt-5">
                     <span className="pulse-dot h-2 w-2 rounded-full bg-accent" />

@@ -22,7 +22,7 @@ export default function StackPage() {
             />
 
             <p className="font-body text-base text-muted leading-relaxed max-w-xl -mt-6 mb-10">
-                Tools I have shipped real products with — not a list of things I have read about.
+                Tools I have shipped real products with, not a list of things I have read about.
             </p>
 
             <div className="flex flex-col gap-3">
