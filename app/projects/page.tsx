@@ -2,6 +2,8 @@ import PageNav from "@/components/PageNav";
 import NextPageLink from "@/components/NextPageLink";
 import Reveal from "@/components/Reveal";
 import ProjectCard from "@/components/ProjectCard";
+import SectionHead from "@/components/SectionHead";
+import { SpotWork } from "@/components/Art";
 import { projects } from "@/lib/data";
 
 export const metadata = {
@@ -10,17 +12,19 @@ export const metadata = {
 
 export default function ProjectsPage() {
     return (
-        <main className="flex flex-col min-h-screen px-6 py-16 sm:px-12 md:px-20 max-w-5xl mx-auto w-full">
+        <main className="flex flex-col min-h-screen px-6 py-14 sm:px-12 md:px-20 max-w-5xl mx-auto w-full">
             <PageNav />
 
-            <div className="mb-12">
-                <p className="font-mono text-xs text-accent tracking-widest uppercase mb-3">
-                    Selected work
-                </p>
-                <h1 className="font-display text-3xl sm:text-4xl font-bold text-primary tracking-tight">
-                    Projects
-                </h1>
-            </div>
+            <SectionHead
+                eyebrow="Nine shipped · all live"
+                title="Projects"
+                art={<SpotWork className="h-16 w-24" />}
+            />
+
+            <p className="font-body text-base text-muted leading-relaxed max-w-xl -mt-6 mb-12">
+                Every one of these is live and built end to end — most of them alone.
+                The first four are the ones worth your time.
+            </p>
 
             <div className="flex flex-col gap-10 md:gap-14">
                 {projects.map((project, i) => (
@@ -30,7 +34,7 @@ export default function ProjectsPage() {
                 ))}
             </div>
 
-            <NextPageLink href="/stack" label="My stack & skills" />
+            <NextPageLink href="/work" label="Who I've worked with" />
         </main>
     );
 }

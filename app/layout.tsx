@@ -1,31 +1,32 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Inter, JetBrains_Mono } from "next/font/google";
+import { Bricolage_Grotesque, DM_Sans, DM_Mono } from "next/font/google";
 import PageTransition from "@/components/PageTransition";
-import IconField from "@/components/IconField";
+import GrainField from "@/components/GrainField";
 import "./globals.css";
 
-const spaceGrotesk = Space_Grotesk({
+const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
-  variable: "--font-space-grotesk",
+  variable: "--font-bricolage",
   display: "swap",
 });
 
-const inter = Inter({
+const dmSans = DM_Sans({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-dm-sans",
   display: "swap",
 });
 
-const jetbrainsMono = JetBrains_Mono({
+const dmMono = DM_Mono({
   subsets: ["latin"],
-  variable: "--font-jetbrains",
+  weight: ["400", "500"],
+  variable: "--font-dm-mono",
   display: "swap",
 });
 
 export const metadata: Metadata = {
   title: "Wahab Saka — Fullstack Developer",
   description:
-    "Fullstack developer (web & mobile) with close to 5 years shipping production products.",
+    "Fullstack developer with close to 5 years building products people actually use — frontend, backend and mobile.",
 };
 
 export default function RootLayout({
@@ -36,13 +37,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrainsMono.variable} h-full antialiased`}
+      className={`${bricolage.variable} ${dmSans.variable} ${dmMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col text-primary font-body">
-        <IconField />
+        <GrainField />
         <PageTransition>{children}</PageTransition>
       </body>
     </html>
   );
 }
-

@@ -28,5 +28,13 @@ export default function CountUp({ value, prefix = "", suffix = "", className }: 
     });
   }, [springValue, prefix, suffix]);
 
-  return <span ref={ref} className={className}>{prefix}0{suffix}</span>;
+  /* Render the final value on the server so the figure is meaningful
+     before hydration and for anyone who never scrolls it into view. */
+  return (
+    <span ref={ref} className={className}>
+      {prefix}
+      {value.toLocaleString()}
+      {suffix}
+    </span>
+  );
 }
