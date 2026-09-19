@@ -16,13 +16,13 @@ export default function ProjectsPage() {
             <PageNav />
 
             <SectionHead
-                eyebrow="Nine shipped · all live"
+                eyebrow="All live"
                 title="Projects"
                 art={<SpotWork className="h-16 w-24" />}
             />
 
             <p className="font-body text-base text-muted leading-relaxed max-w-xl -mt-6 mb-12">
-                Every one of these is live and built end to end, most of them alone.
+                Every one of these is live and built end to end, alone.
             </p>
 
             <div className="flex flex-col gap-10 md:gap-14">
