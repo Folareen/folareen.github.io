@@ -14,8 +14,8 @@ interface ProjectCardProps {
 
 /**
  * Preview strip. Loads the live site in a sandboxed iframe once the
- * card scrolls into view — never on mount, so nine cards never mean
- * nine simultaneous page loads. The generated mark covers the gap
+ * card scrolls into view — never on mount, so a full list never means
+ * that many simultaneous page loads. The generated mark covers the gap
  * while the frame loads and stands in permanently if it fails
  * (blocked by frame headers, offline, etc).
  */

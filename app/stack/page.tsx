@@ -6,7 +6,7 @@ import { SpotStack, stackIcons } from "@/components/Art";
 import { stackGroups, education } from "@/lib/data";
 
 export const metadata = {
-    title: "Stack — Wahab Saka",
+    title: "Stack | Wahab Saka",
 };
 
 export default function StackPage() {

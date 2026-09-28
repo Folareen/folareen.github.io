@@ -24,9 +24,9 @@ const dmMono = DM_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Wahab Saka — Fullstack Developer",
+  title: "Wahab Saka | Fullstack Developer",
   description:
-    "Fullstack developer with close to 5 years building products people actually use across frontend, backend and mobile.",
+    "Fullstack developer with close to 5 years taking products from nothing to shipped across frontend, backend, mobile and AI.",
 };
 
 export default function RootLayout({

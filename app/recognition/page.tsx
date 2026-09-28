@@ -2,11 +2,12 @@ import PageNav from "@/components/PageNav";
 import NextPageLink from "@/components/NextPageLink";
 import Reveal from "@/components/Reveal";
 import SectionHead from "@/components/SectionHead";
+import ProofGallery from "@/components/ProofGallery";
 import { SpotAward } from "@/components/Art";
 import { recognitions } from "@/lib/data";
 
 export const metadata = {
-    title: "Recognition — Wahab Saka",
+    title: "Recognition | Wahab Saka",
 };
 
 export default function RecognitionPage() {
@@ -48,6 +49,10 @@ export default function RecognitionPage() {
                             <p className="relative font-body text-sm text-muted mt-5 leading-relaxed whitespace-pre-line">
                                 {item.description}
                             </p>
+
+                            {item.proofs && item.proofs.length > 0 && (
+                                <ProofGallery proofs={item.proofs} />
+                            )}
 
                             {item.link && (
                                 <a

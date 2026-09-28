@@ -7,7 +7,7 @@ import { SpotWork } from "@/components/Art";
 import { projects } from "@/lib/data";
 
 export const metadata = {
-    title: "Projects — Wahab Saka",
+    title: "Projects | Wahab Saka",
 };
 
 export default function ProjectsPage() {
@@ -22,7 +22,7 @@ export default function ProjectsPage() {
             />
 
             <p className="font-body text-base text-muted leading-relaxed max-w-xl -mt-6 mb-12">
-                Every one of these is live and built end to end, alone.
+                Personal projects, all live.
             </p>
 
             <div className="flex flex-col gap-10 md:gap-14">

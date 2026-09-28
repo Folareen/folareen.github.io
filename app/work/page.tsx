@@ -7,7 +7,7 @@ import { SpotTimeline } from "@/components/Art";
 import { workEntries } from "@/lib/data";
 
 export const metadata = {
-    title: "Work — Wahab Saka",
+    title: "Work | Wahab Saka",
 };
 
 export default function WorkPage() {
@@ -49,12 +49,6 @@ export default function WorkPage() {
                             {entry.impact && (
                                 <p className="font-body text-sm text-primary leading-relaxed mb-4 pl-3 border-l-2 border-accent">
                                     {entry.impact}
-                                </p>
-                            )}
-
-                            {entry.note && (
-                                <p className="font-body text-sm text-muted leading-relaxed mb-4">
-                                    {entry.note}
                                 </p>
                             )}
 

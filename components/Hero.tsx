@@ -3,8 +3,8 @@
 import { motion } from "motion/react";
 import FlowLink from "@/components/FlowLink";
 import Marquee from "@/components/Marquee";
-import { capabilityIcons } from "@/components/Art";
-import { identity, experienceLine, capabilities } from "@/lib/data";
+import CapabilityStack from "@/components/CapabilityStack";
+import { identity } from "@/lib/data";
 
 const container = {
   hidden: {},
@@ -34,10 +34,10 @@ export default function Hero() {
 
         <h1 className="font-display font-extrabold leading-[0.95] tracking-tight text-5xl sm:text-7xl">
           <motion.span variants={item} className="block text-primary">
-            I build products
+            I take products from
           </motion.span>
           <motion.span variants={item} className="block text-accent">
-            people actually use.
+            nothing to shipped.
           </motion.span>
         </h1>
 
@@ -55,14 +55,6 @@ export default function Hero() {
           </span>
           <span className="font-mono text-xs text-muted">{identity.role}</span>
         </motion.div>
-
-        {/* ── Experience ─────────────────────────────────── */}
-        <motion.p
-          variants={item}
-          className="font-mono text-xs sm:text-sm text-muted tracking-tight mt-5"
-        >
-          {experienceLine}
-        </motion.p>
       </section>
 
       {/* ── What I do ────────────────────────────────────── */}
@@ -71,29 +63,7 @@ export default function Hero() {
           What I do
         </motion.p>
 
-        <div className="grid sm:grid-cols-2 gap-3">
-          {capabilities.map((cap) => {
-            const Icon = capabilityIcons[cap.icon];
-            return (
-              <motion.div
-                key={cap.label}
-                variants={item}
-                className="group bg-surface border border-line rounded-lg p-5 hover:border-accent/50 transition-colors duration-200"
-              >
-                <div className="flex items-center gap-2.5 mb-3">
-                  <Icon className="h-[18px] w-[18px] text-accent" />
-                  <h2 className="font-display text-base font-semibold text-primary">
-                    {cap.label}
-                  </h2>
-                </div>
-                <p className="font-body text-sm text-muted leading-relaxed">{cap.blurb}</p>
-                <p className="font-mono text-[11px] text-dim leading-relaxed mt-3 pt-3 border-t border-line">
-                  {cap.proof}
-                </p>
-              </motion.div>
-            );
-          })}
-        </div>
+        <CapabilityStack />
       </motion.section>
 
       <motion.div variants={item} className="mt-14">

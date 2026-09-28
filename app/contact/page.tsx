@@ -10,7 +10,7 @@ import { MdOutlineEmail } from "react-icons/md";
 import { LuFileText, LuArrowUpRight } from "react-icons/lu";
 
 export const metadata = {
-    title: "Contact — Wahab Saka",
+    title: "Contact | Wahab Saka",
 };
 
 const contactItems = [
